@@ -1,0 +1,53 @@
+.link-continue {
+	margin-bottom: 10px;
+	padding-right: 12px;
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #111111;
+}
+
+.link-continue::after {
+	position: absolute;
+	content: "";
+	right: 0;
+	width: 0;
+	height: 0;
+	border-left: 5px solid #111111;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+}
+
+.link-continue:hover {
+	text-decoration: underline;
+}
+
+.link-continue:hover:after {
+	border-left-color: #364962;
+}
+
+
+/*Кнопка в фосе email*/
+.link-continue--form {
+	padding: 9px 0;
+	width: 100px;
+	background-color: #00c8c8;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.link-continue--form:hover {
+	color: #364962;
+	text-decoration: none;
+}
+
+.link-continue--form::after {
+	border-left: 5px solid #fff;
+	right: 17px;
+}
+/********************/

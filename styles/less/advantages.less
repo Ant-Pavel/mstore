@@ -1,0 +1,64 @@
+.advantages {
+	background-color: #fff;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.advantages__item {
+	position: relative;
+	box-sizing: border-box;
+	width: 25%;
+	padding-left: 70px;
+}
+
+.advantages__title {
+	margin: 0;
+	font-weight: 700;
+	color: #252525;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.advantages__text {
+	margin: 0;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 300;
+	color: #898989;
+}
+
+.advantages__item::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	width: 70px;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.advantages__item--shipping::before {
+	background-image: url(../../images/icon--truck.png);
+}
+
+.advantages__item--support::before {
+	background-image: url(../../images/icon--lifebuoy.png);
+}
+
+.advantages__item--return::before {
+	background-image: url(../../images/icon--return.png);
+}
+
+.advantages__item--payment::before {
+	background-image: url(../../images/icon--card.png);
+
+}

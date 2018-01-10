@@ -1,0 +1,81 @@
+.post {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.post:hover {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.post__image {
+	width: 370px;
+	height: 225px;
+	margin-bottom: 18px;
+	overflow: hidden;
+}
+
+.post__image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.post__descr {
+	padding-left: 8px;
+}
+
+.post__title {
+	margin-bottom: 12px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
+	color: #252525;
+}
+
+.post__meta {
+	margin-bottom: 12px;
+	font-size: 0;
+}
+
+.post__meta span {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 30px;
+	padding-left: 20px;
+	font-size: 10px;
+	line-height: 12px;
+	color: #636363;
+}
+
+.post__meta span::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	width: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.post__date::before {
+	width: 13px;
+	height: 13px;
+	background-image: url(../../images/icon--calendar.png);
+	top: -2px;
+}
+
+.post__comments::before {
+	width: 12px;
+	height: 12px;
+	background-image: url(../../images/icon--comments.png);
+}
+
+.post__text {
+	margin-bottom: 15px;
+	padding-right: 25px;
+	color: #898989;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 300;
+}
