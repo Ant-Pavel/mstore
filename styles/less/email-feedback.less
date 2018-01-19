@@ -1,5 +1,6 @@
 .email-feedback {
 	min-height: 200px;
+	background-color: #3a3d3c;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-image: url(../../images/footer-bg.jpg);
@@ -8,13 +9,38 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		flex-wrap: wrap;
 		padding-top: 65px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.email-feedback .container {
+		padding-top: 35px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.email-feedback .container {
+		padding-top: 15px;
 	}
 }
 
 .email-feedback__text {
 	color: #fff;
 	width: 400px;
+}
+
+@media screen and (max-width: 1200px) {
+	.email-feedback__text {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.email-feedback__text {
+		text-align: center;
+	}
 }
 
 .email-feedback__title {
@@ -26,23 +52,37 @@
 	text-transform: uppercase;
 }
 
-.email-feedback__text {
+@media screen and (max-width: 1200px) {
+	.email-feedback__title {
+		margin-bottom: 5px;
+	}
+}
+
+.email-feedback__info {
 	margin: 0;
 	font-size: 12px;
 	line-height: 16px;
 	font-weight: 300;
 }
 
+@media screen and (max-width: 1200px) {
+	.email-feedback__info {
+		margin-bottom: 20px;
+	}
+}
+
 .email-feedback__form {
+	box-sizing: border-box;
 	width: 670px;
 	text-align: right;
 }
 
-.field-text__input {
-	margin-bottom: 10px;
-	width: 660px;
-	background-color: #fff;
-	font-size: 12px;
-	line-height: 16px;
-	padding: 12px 5px;
+@media screen and (max-width: 1200px) {
+	.email-feedback__form {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+	}
 }

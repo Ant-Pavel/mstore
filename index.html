@@ -30,7 +30,8 @@
 				<a href="/" class="header__logo">
 					<img src="images/logo.png" alt="Logo">
 				</a>
-				<nav class="header__nav">
+				<span class="header__menu-toggle header__menu-toggle--nojs header__menu-toggle--closed"></span>
+				<nav class="header__nav header__nav--closed header__nav--nojs">
 					<ul class="header__menu">
 						<li class="header__menu-item"><a href="">Home</a></li>
 						<li class="header__menu-item"><a href="">Men</a></li>
@@ -41,7 +42,17 @@
 					</ul>
 				</nav>
 				<div class="header__user-info">
-					<span class="header__user-data header__user-data--search"></span>
+					<span class="header__user-data header__user-data--search">
+						<div class="header__search-form-wrapper">
+							<form class="search-form" action="#" method="GET">
+								<span class="search-form__title">Finding items</span>
+								<label for="search" class="field-text field-text--search">
+									<input class="field-text__input field-text__input--search" type="text" id="search" placeholder="I'm looking for...">
+								</label>
+								<button class="link-continue link-continue--search" type="submit">Search</button>
+							</form>
+						</div>
+					</span>
 					<span class="header__user-data header__user-data--profile"></span>
 					<span class="header__user-data header__user-data--whishlist"></span>
 					<span class="header__user-data header__user-data--basket">
@@ -64,21 +75,33 @@
 	</div>
 	<div class="advantages">
 		<div class="container">
-			<div class="advantages__item advantages__item--shipping">
-				<p class="advantages__title">Free shipping</p>
-				<p class="advantages__text">Free shipping for all US order</p>
+			<div class="advantages__item">
+				<span class="advantages__icon advantages__icon--shipping"></span>
+				<div class="advantages__text-wrapper">
+					<p class="advantages__title">Free shipping</p>
+					<p class="advantages__text">Free shipping for all US order</p>
+				</div>
 			</div>
-			<div class="advantages__item advantages__item--support">
-				<p class="advantages__title">Support 24/7</p>
-				<p class="advantages__text">We support 24 hours a day</p>
+			<div class="advantages__item">
+				<span class="advantages__icon advantages__icon--support"></span>
+				<div class="advantages__text-wrapper">
+					<p class="advantages__title">Support 24/7</p>
+					<p class="advantages__text">We support 24 hours a day</p>
+				</div>
 			</div>
-			<div class="advantages__item advantages__item--return">
-				<p class="advantages__title">30 day return</p>
-				<p class="advantages__text">You have 30 days to return</p>
+			<div class="advantages__item">
+				<span class="advantages__icon advantages__icon--return"></span>
+				<div class="advantages__text-wrapper">
+					<p class="advantages__title">30 day return</p>
+					<p class="advantages__text">You have 30 days to return</p>
+				</div>
 			</div>
-			<div class="advantages__item advantages__item--payment">
-				<p class="advantages__title">payment 100% secured</p>
-				<p class="advantages__text">Payment 100% secured</p>
+			<div class="advantages__item">
+				<span class="advantages__icon advantages__icon--payment"></span>
+				<div class="advantages__text-wrapper">
+					<p class="advantages__title">payment 100% secured</p>
+					<p class="advantages__text">Payment 100% secured</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -94,7 +117,7 @@
 				<p class="arrivals__title"><span class="arrivals__subtitle arrivals__subtitle--right">New arrivals</span>Shirt for girl's</p>
 				<p class="arrivals__price arrivals__price--right">$99.00</p>
 				<div class="arrivals__text"><p>Refresh your wardrobe with a piece from our gorgeous ready-to-wear collection, featuring beautifully crafted coats, dresses, jackets, sweaters, skirts, tops and trousers.</p> <p>Whether you’re searching for a special occasion...</p></div>
-				<a href="" class="link-continue">Shopping now</a>
+				<a href="" class="link-continue link-continue--arrivals">Shopping now</a>
 			</div>
 		</div>
 	</div>
@@ -325,13 +348,14 @@
 	</div>
 	<div class="special">
 		<div class="container">
-			<div class="special__product"></div>
-			<div class="special__info">
-				<span class="special__1st-line">Sport shoes collection</span>
-				<span class="special__2nd-line">Entire shoes purchase</span>
-				<span class="special__3rd-line">Save up to $70</></span>
-				<a href="" class="special__link">Click here see all the shoes collection...</a>
-			</div>
+			<!-- <div class="special__info-wrapper"> -->
+				<div class="special__info">
+					<span class="special__1st-line">Sport shoes collection</span>
+					<span class="special__2nd-line">Entire shoes purchase</span>
+					<span class="special__3rd-line">Save up to $70</></span>
+					<a href="" class="special__link">Click here see all the shoes collection...</a>
+				</div>
+			<!-- </div> -->
 		</div>
 	</div>
 	<div class="reviews">
@@ -339,7 +363,7 @@
 			<div class="reviews__info">
 				<div class="reviews__title">We love mstore.</div>
 				<p class="reviews__text">A professional-looking tote for your everyday needs! This Wilsons Leather tote has a canvas look with genuine leather trim and a structured silhouette. Its shiny gold-tone hardware and two-tone design give it extra fashionable flair.</p>
-				<a href="" class="link-continue">Discover</a>
+				<a href="" class="link-continue link-continue--reviews">Discover</a>
 			</div>
 			<div class="reviews__picture"></div>
 		</div>
@@ -504,10 +528,10 @@
 		<div class="container">
 			<div class="email-feedback__text">
 				<p class="email-feedback__title">Join our email</p>
-				<p class="email-feedback__text">We only send emails once a month and only about good things.</p>
+				<p class="email-feedback__info">We only send emails once a month and only about good things.</p>
 			</div>
 			<div class="email-feedback__form">
-				<label class="field-text">
+				<label class="field-text field-text--feedback">
 					<input type="text" class="field-text__input" placeholder="Your email...">
 				</label>
 				<button type="submit" class="link-continue link-continue--form">Submit</button>
@@ -516,7 +540,7 @@
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<div class="footer__left">
+			<div class="footer__main">
 				<a href="/" class="footer__logo">
 					<img src="images/Logo--footer.png" alt="Logo">
 				</a>
@@ -544,30 +568,29 @@
 					<a href="#" class="footer__soc-link footer__soc-link--be"></a>
 				</div>
 			</div>
-			<div class="footer__center footer-info">
-				<span class="footer-info__title">Informations</span>
-				<div class="footer-info__links-wrapper">
-					<ul class="footer-info__links footer-info__links--left">
-						<li class="footer-info__link"><a href="#">Privacy</a></li>
-						<li class="footer-info__link"><a href="#">Terms of Use</a></li>
-						<li class="footer-info__link"><a href="#">Copyright</a></li>
-						<li class="footer-info__link"><a href="#">Find Your Country</a></li>
-						<li class="footer-info__link"><a href="#">Site map</a></li>
-					</ul>
-
-					<ul class="footer-info__links footer-info__links--right">
-						<li class="footer-info__link"><a href="#">Ordering info</a></li>
-						<li class="footer-info__link"><a href="#">Contacts</a></li>
-						<li class="footer-info__link"><a href="#">Return info</a></li>
-						<li class="footer-info__link"><a href="#">Warranty</a></li>
-						<li class="footer-info__link"><a href="#">Product Manual</a></li>
+			<div class="footer-nav">
+				<span class="footer-nav__title">Informations</span>
+				<div class="footer-nav__links-wrapper">
+					<ul class="footer-nav__links">
+						<li class="footer-nav__link"><a href="#">Privacy</a></li>
+						<li class="footer-nav__link"><a href="#">Terms of Use</a></li>
+						<li class="footer-nav__link"><a href="#">Copyright</a></li>
+						<li class="footer-nav__link"><a href="#">Find Your Country</a></li>
+						<li class="footer-nav__link"><a href="#">Site map</a></li>
+						<li class="footer-nav__link"><a href="#">Ordering info</a></li>
+						<li class="footer-nav__link"><a href="#">Contacts</a></li>
+						<li class="footer-nav__link"><a href="#">Return info</a></li>
+						<li class="footer-nav__link"><a href="#">Warranty</a></li>
+						<li class="footer-nav__link"><a href="#">Product Manual</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="footer__right">
+			<div class="footer__map-wrapper">
 				<div class="footer__map"></div>
 			</div>
 		</div>
 	</footer>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/user.js"></script>
 </body>
 </html>

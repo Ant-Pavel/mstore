@@ -6,7 +6,7 @@ var watch = require('gulp-watch');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var mqpacker = require('css-mqpacker');
+// var mqpacker = require('css-mqpacker');
 var minify = require('gulp-csso');
 var rename = require('gulp-rename');
 var bs = require('browser-sync').create();
@@ -19,10 +19,11 @@ gulp.task('style', ()=> {
 	pipe(postcss([
 		autoprefixer({
 			browsers: ['last 2 versions']
-		}),
-		mqpacker({
-			sort: true
 		})
+		// ,
+		// mqpacker({
+		// 	sort: false
+		// })
 		])).
 	pipe(gulp.dest('styles/css')).
 	pipe(minify()).

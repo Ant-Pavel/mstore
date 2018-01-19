@@ -4,8 +4,16 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: top;
+		flex-wrap: wrap;
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.reviews {
+		background-color: #96dbc9;
+	}
+}
+
 
 .reviews__info {
 	min-height: 400px;
@@ -14,6 +22,15 @@
 	box-sizing: border-box;
 	padding-top: 60px;
 	text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+	.reviews__info {
+		width: 100%;
+		min-height: auto;
+		margin-bottom: 10px;
+		padding-top: 30px;
+	}
 }
 
 .reviews__title {
@@ -49,6 +66,21 @@
 	color: #31353d;
 }
 
+@media screen and (max-width: 1200px) {
+	.reviews__text {
+		margin-bottom: 15px;
+		padding: 0 80px;
+		line-height: 24px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.reviews__text {
+		margin-bottom: 15px;
+		padding: 0 10px;
+	}
+}
+
 .reviews__picture {
 	width: 50%;
 	min-height: 400px;
@@ -56,4 +88,22 @@
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-image: url(../../images/dress-room.jpg);
+	background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+	.reviews__picture {
+		width: 585px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.reviews__picture {
+		width: 320px;
+		min-height: 220px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
 }

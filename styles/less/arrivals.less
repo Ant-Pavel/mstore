@@ -10,8 +10,9 @@
 }
 
 .arrivals__item {
-	width: 555px;
-	min-height: 325px;
+	width: 49%;
+	box-sizing: border-box;
+	min-height: 400px;
 	padding-top: 75px;
 	display: flex;
 	flex-direction: column;
@@ -19,6 +20,19 @@
 	flex-wrap: wrap;
 	background-position: center top;
 	background-repeat: no-repeat;
+}
+
+@media(max-width: 1150px) {
+.arrivals__item {
+		width: 540px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+}
+
+@media(max-width: 660px) {
+.arrivals__item {
+	}
 }
 
 .arrivals__item--left {
